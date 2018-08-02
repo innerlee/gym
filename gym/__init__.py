@@ -19,7 +19,7 @@ def undo_logger_setup():
 # object.
 class Spaces(object):
     def __getattr__(self, k):
-        warnings.warn('DEPRECATION WARNING: to improve load times, gym no longer automatically loads gym.spaces. Please run "import gym.spaces" to load gym.spaces on your own. This warning will turn into an error in a future version of gym.')
+        # warnings.warn('DEPRECATION WARNING: to improve load times, gym no longer automatically loads gym.spaces. Please run "import gym.spaces" to load gym.spaces on your own. This warning will turn into an error in a future version of gym.')
         import gym.spaces
         return getattr(gym.spaces, k)
 spaces = Spaces()
